@@ -303,14 +303,16 @@ terraform apply
 
 ✔ **Terraform state** will now be stored securely in **S3**.
 
-### Uncomment the VPC module to create VPC resources
+#### Uncomment the VPC module to create VPC resources
 
 I had commented on the VPC resources earlier to get the S3 bucket and backend running smoothly.
 
--Uncomment on all if you have,run `terraform init` to initialize any new module.
+-`Uncomment` on all comment if you have,run `terraform init` to initialize any new module.
 ![](./img/m21.png)
 
-  and `terraform apply`
+  and 
+  
+  `terraform apply`
 
 ![](./img/m22.png)
 ![](./img/m23.png)
@@ -322,21 +324,16 @@ I had commented on the VPC resources earlier to get the S3 bucket and backend ru
 
 **`terraform destroy`** removes all resources managed by Terraform, deleting infrastructure from your cloud provider.
 
-```
-terraform destroy
-``
-
-![](./img/m24.png)
+ ![](./img/m24.png)
 
 
-
-
-## **Areas for Improvement**
-### 🔹 **IAM Role for Secure Backend Storage**
+### **Areas for Improvement**
+#### 🔹 **IAM Role for Secure Backend Storage**
 Instead of allowing an AWS user (`arn:aws:iam::491085391064:user/Edward`), **create an IAM role** for Terraform execution.
 
-### 🔹 **DynamoDB for State Locking**
+#### 🔹 **DynamoDB for State Locking**
 To prevent simultaneous Terraform executions:
+
 ```hcl
 terraform {
   backend "s3" {
