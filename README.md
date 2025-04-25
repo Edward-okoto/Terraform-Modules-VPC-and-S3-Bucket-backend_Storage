@@ -317,6 +317,20 @@ I had commented on the VPC resources earlier to get the S3 bucket and backend ru
 
 ---
 
+
+#### Terraform Destroy
+
+**`terraform destroy`** removes all resources managed by Terraform, deleting infrastructure from your cloud provider.
+
+```
+terraform destroy
+``
+
+![](./img/m24.png)
+
+
+
+
 ## **Areas for Improvement**
 ### 🔹 **IAM Role for Secure Backend Storage**
 Instead of allowing an AWS user (`arn:aws:iam::491085391064:user/Edward`), **create an IAM role** for Terraform execution.
